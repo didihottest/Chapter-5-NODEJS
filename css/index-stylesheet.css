@@ -1,0 +1,377 @@
+/* global-setting start */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.background-style {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+
+}
+
+/* global-setting end */
+
+/* top-menu start */
+#top-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+}
+
+.container-fluid {
+    padding: 0% 7% 0% 7%;
+}
+
+.navbar-brand {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    padding-right: 100px;
+}
+
+.nav-item {
+    padding-right: 40px;
+}
+
+.nav-link {
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* top-menu end */
+
+/* playnow start */
+
+#playnow-section {
+    text-align: center;
+    color: white;
+    background-image: url("../assets/main-bg.jpg");
+}
+
+.playnow {
+    padding-top: 300px;
+    padding-bottom: 600px;
+}
+
+.playnow h1 {
+    font-size: 5em;
+    font-weight: 700;
+    font-family: 'Arial';
+}
+
+.playnow h2 {
+    font-size: 2em;
+    font-family: 'Arial', cursive;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.playnow a {
+    text-decoration: none;
+    color: black;
+}
+
+.playbutton {
+    padding: 0.8em 4em;
+    background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+    border-radius: 4px;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.story {
+    padding-bottom: 60px;
+}
+
+.story-text {
+    font-size: 0.75em;
+    font-family: 'Open Sans';
+    font-weight: bold;
+}
+
+/* playnow end */
+
+/* the-games start */
+#the-games-section {
+    background-image: url("../assets/the-games-bg.jpg");
+    color: white;
+}
+
+.the-games {
+    padding-top: 300px;
+    padding-bottom: 300px;
+}
+
+.text-title {
+    font-size: 1.5em;
+    color: white;
+}
+
+.text-content {
+    font-size: 3.5em;
+    color: white;
+}
+
+.carousel-indicators>li {
+    border-radius: 50%;
+    margin: 1px 3px;
+    height: 10px;
+    max-width: 10px;
+    border: 1px solid #FFF;
+    background-color: transparent;
+}
+
+.carousel-indicators .active {
+    background-color: #fff;
+    background-color: white;
+}
+
+/* the-games end */
+
+/* features start */
+
+#features-section {
+    background-image: url("../assets/features.jpg");
+    padding-top: 300px;
+    padding-bottom: 570px;
+}
+
+#accordion {
+    background-color: transparent;
+
+}
+
+.golden {
+    color: #FFB548;
+    font-size: 1.2rem;
+    padding-left: 0%;
+}
+
+.golden:hover {
+    color: gold !important;
+    font-size: 1.2rem !important;
+}
+
+.features-text {
+    padding-left: 5% !important;
+}
+
+.card-header {
+    padding-left: 5%;
+}
+
+.card-style {
+    background-color: transparent;
+    color: white;
+
+}
+
+/* features end */
+
+/* system-req start */
+#system-req-section {
+    background-image: url("../assets/requirements.png");
+    padding-top: 50px;
+    padding-bottom: 250px;
+}
+
+.sys-title {
+    color: goldenrod;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.sys-desc {
+    color: white;
+    font-size: 1em;
+}
+
+.sysreq-header {
+    text-align: center;
+    color: white;
+    font-size: 1em;
+}
+
+.sysreq-header2 {
+    margin-top: 1em;
+    font-size: 3.5em;
+    font-family: 'Arial', cursive;
+    color: white;
+    line-height: 1em;
+}
+
+.table-bordered td {
+    border: 1.5px solid rgb(70, 69, 69);
+}
+
+/* system-req end */
+
+/* topscores start */
+
+#topscores-section {
+    background-image: url(../assets/top-score-bg.png), linear-gradient(to right, rgb(44, 44, 44), rgb(0, 0, 0));
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.topscores-title {
+    color: white;
+    font-size: 3.5em;
+}
+
+.topscores-text {
+    font-size: 1em;
+    color: white;
+}
+
+.topscores-review-style {
+    color: white;
+}
+
+
+.review-box {
+    background-color: #191A1B;
+    border-radius: 10px;
+    padding: 5% 5% 1% 5%;
+    margin-bottom: 7%;
+}
+
+.reviewer-img {
+    width: 3rem;
+    box-shadow: 5px 5px #FFB548;
+    padding-bottom: 1%;
+}
+
+.reviewer-name {
+    color: #FFB548;
+    font-size: 1.5em;
+    margin-bottom: 0.5%;
+}
+
+.reviewer-job {
+    font-size: 1em;
+    color: gray;
+}
+
+.reviewer-testi {
+    font-size: 1em;
+    color: white;
+}
+
+.reviewer-date {
+    font-size: 1em;
+    color: gray;
+}
+
+/* topscores end */
+
+/* news-section start */
+#news-section {
+    background-image: url(../assets/news-letter.jpg);
+    padding-top: 300px;
+    padding-bottom: 100px;
+    color: white;
+    
+}
+
+.news-section-text-container {
+    padding-bottom: 5%;
+}
+
+.news-title {
+    font-size: 1.5rem;
+    font-family: 'Arial';
+}
+
+.news-subscribe {
+    font-size: 4rem;
+    font-family: 'Arial';
+    font-weight: normal;
+}
+
+.news-desc {
+    font-size: 1rem;
+}
+
+.email-box {
+    background: #1C1D1F;
+    border-radius: 5px;
+    margin-right: 5%;
+}
+
+.email-input-box {
+    background: #1C1D1F;
+    border: 0px;
+}
+
+
+.form-control {
+    padding:0%;
+}
+
+.email-input-box::placeholder{
+    color: #FFB548;
+}
+
+.subscribe-button {
+    background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+    height: auto;
+    border-radius: 4px;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+
+
+/* news-section end */
+
+/* footer start */
+.footer {
+    background-color: transparent;
+    margin-top: 20%;
+    width: 100%;
+}
+
+.footer-button {
+    margin-bottom: 3%;
+}
+
+.white-bar {
+    padding: 1px 0px 1px 0px;
+    background-color:gray;
+}
+
+.cpright-text {
+    color: grey;
+}
+
+.privacy a {
+    text-decoration: none;
+    color: white;
+}
+
+.privacy-text {
+    margin-right: 2%;
+    white-space: nowrap;
+}
+
+/* footer end */

@@ -1,0 +1,260 @@
+@media (max-width:992px) {
+
+    /* top-menu start */
+    .nav-item {
+        padding-right: 0px;
+    }
+
+    /* top-menu end */
+
+    /* the-games start */
+    #the-games-section {
+        text-align: center;
+    }
+
+    .text-content {
+        margin-bottom: 2em;
+    }
+
+    /* the-games end */
+
+    /* features start */
+
+    .text-title {
+        text-align: center;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .card-style {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    /* features end */
+
+    /* system-req start */
+
+    /* system-req end */
+
+    /* topscores start */
+    .topscores-desc-style {
+        text-align: center;
+        margin-bottom: 10%;
+    }
+
+    .reviewer-img-container {
+        margin-bottom: 5%;
+    }
+
+    .topscores-review-style {
+        text-align: center;
+    }
+
+    .medsos {
+        margin-bottom: 2%;
+    }
+
+    /* topscores end */
+
+    /* news-section start */
+    .news-title {
+        text-align: center;
+    }
+
+    .email-box {
+        text-align: center;
+        margin-right: 0%;
+    }
+
+    .email-input-box::placeholder {
+        text-align: center;
+    }
+
+    .news-subscribe {
+        text-align: center;
+    }
+
+    .news-desc {
+        text-align: center;
+    }
+
+    /* news-section end */
+    
+    /* footer-start */
+    .copy-right {
+        text-align: center;
+    }
+
+    .cpright-text {
+        width: 100%;
+    }
+
+    .privacy {
+        width: 100%;
+    }
+
+    /* footer-end */
+
+}
+
+@media (max-width:576px) {
+
+    .container-fluid {
+        padding: 4%;
+    }
+
+    /* top-menu start */
+    #top-menu .container-fluid {
+        padding: 0%;
+    }
+
+    /* top-menu end */
+
+    /* playnow start */
+    .playnow {
+        padding-top: 200px;
+        padding-bottom: 320px;
+    }
+
+    .playnow h1 {
+        font-size: 2.2rem;
+        font-family: 'arial', cursive;
+        line-height: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .playnow h2 {
+        font-size: 1.2rem;
+        font-family: 'arial', cursive;
+        margin-bottom: 50px;
+    }
+
+    .playnow a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* playnow end */
+
+    /* the-games start */
+    #the-games-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .text-title {
+        font-size: 1.2em;
+    }
+
+    .text-content {
+        font-size: 2em;
+    }
+
+    /* the-games end */
+
+    /* features start */
+
+    #features-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+
+    /* features end */
+
+    /* system-req start */
+
+    #system-req-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+
+    .sys-title {
+        color: goldenrod;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .sys-desc {
+        color: white;
+        font-size: 0.9em;
+    }
+
+    .sysreq-header {
+        text-align: center;
+        color: white;
+        font-size: 1em;
+    }
+
+    .sysreq-header2 {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    /* system-req end */
+
+    /* topscores start */
+
+
+    .reviewer-img-container {
+        margin-bottom: 5%;
+    }
+
+    .topscores-review-style {
+        text-align: center;
+    }
+
+    .medsos {
+        margin-bottom: 2%;
+    }
+
+    /* topscores end */
+
+    /* news-section start */
+
+    #news-section {
+        padding-top: 100px;
+    }
+    .news-title {
+        text-align: center;
+    }
+
+    .email-box {
+        text-align: center;
+        margin-right: 0%;
+    }
+
+    .email-input-box::placeholder {
+        text-align: center;
+    }
+
+    .news-subscribe {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .news-desc {
+        text-align: center;
+    }
+
+    /* news-section end */
+
+    /* footer-start */
+    .copy-right {
+        text-align: center;
+    }
+
+    .cpright-text {
+        width: 100%;
+    }
+
+    .privacy {
+        width: 100%;
+    }
+
+    /* footer-end */
+}
