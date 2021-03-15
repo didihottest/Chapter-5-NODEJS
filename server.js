@@ -43,6 +43,10 @@ app.get("/api/login", function(req, res){
     res.status(200).json(logins)
 });
 
+app.get("/failed", function (req, res) {  
+    res.render("fail-login");
+});
+
 app.use((req, res, next)=>{
     res.status(404).render("notfound");
 });
