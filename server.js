@@ -15,6 +15,7 @@ app.get("/", function(req, res) {
 app.get("/login", function(req, res){
     res.render("login");
 })
+
 let loginStatus = 0;
 app.post("/login", function(req, res){
     let playerNameLogin = req.body.playerName;
