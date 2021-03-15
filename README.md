@@ -1,4 +1,4 @@
-# Rock Paper Scissor Game
+# Node JS Server and static API
 
 ## Author
 Muhammad Didi Majdi Saleh
