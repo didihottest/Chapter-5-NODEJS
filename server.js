@@ -15,7 +15,7 @@ app.get("/", function(req, res) {
 app.get("/login", function(req, res){
     res.render("login");
 })
-
+let loginStatus = 0;
 app.post("/login", function(req, res){
     let playerNameLogin = req.body.playerName;
     let playerPassword = req.body.password;
@@ -23,6 +23,7 @@ app.post("/login", function(req, res){
     request(loginURL, function(error, response, body){
         let loginDB = JSON.parse(body);
         if (playerNameLogin === loginDB.playerName && playerPassword === loginDB.password){
+            loginStatus = 1;
             res.redirect("/game")
         } else {
             res.redirect("/failed");
@@ -32,11 +33,14 @@ app.post("/login", function(req, res){
 
 app.get("/game", function(req, res){
     let loginURL = "http://localhost:3000/api/login";
-    request(loginURL, function (error, response, body){
-        let loginDB = JSON.parse(body);
-        res.render("game", {playerName: loginDB.playerName});
-        return loginDB;
-    })
+    if (loginStatus === 1) {
+        request(loginURL, function (error, response, body){
+            let loginDB = JSON.parse(body);
+            res.render("game", {playerName: loginDB.playerName});
+        })
+    } else {
+        res.render("login-first");
+    }
 });
 
 app.get("/api/login", function(req, res){
