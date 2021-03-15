@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
-const fs = require("fs")
+const request = require("request")
+const logins = require("./json/playerName.json")
+const router = express.Router()
+app.use(router);
 app.use(express.static(__dirname));
 app.use(express.urlencoded({ extended: true }));
-
 app.set("view engine", "ejs");
 
 app.get("/", function(req, res) {
@@ -15,18 +17,34 @@ app.get("/login", function(req, res){
 })
 
 app.post("/login", function(req, res){
-    let playerName = {playerName:req.body.playerName};
-    playerNameJSON = JSON.stringify(playerName);
-    fs.writeFile("json/playerName.json", playerNameJSON, (err)=>err)
-    res.redirect('/game');
-})
+    let playerNameLogin = req.body.playerName;
+    let playerPassword = req.body.password;
+    let loginURL = "http://localhost:3000/api/login";
+    request(loginURL, function(error, response, body){
+        let loginDB = JSON.parse(body);
+        if (playerNameLogin === loginDB.playerName && playerPassword === loginDB.password){
+            res.redirect("/game")
+        } else {
+            res.redirect("/failed");
+        }
+    });
+});
 
 app.get("/game", function(req, res){
-    fs.readFile('json/playerName.json', (err, data) => {
-        if (err) throw err;
-        let playerLoggedin = JSON.parse((data.toString()))
-        res.render("game", {playerName:playerLoggedin.playerName});
-      });
+    let loginURL = "http://localhost:3000/api/login";
+    request(loginURL, function (error, response, body){
+        let loginDB = JSON.parse(body);
+        res.render("game", {playerName: loginDB.playerName});
+        return loginDB;
+    })
+});
+
+app.get("/api/login", function(req, res){
+    res.status(200).json(logins)
+});
+
+app.use((req, res, next)=>{
+    res.status(404).render("notfound");
 });
 
 app.listen(3000, function(){

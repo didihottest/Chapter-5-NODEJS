@@ -21,6 +21,10 @@ body {
 
 .signin-title {
   font-weight: bold;
+  color: white;
+  padding: 10px 50px;
+  background-color: #9A6F59;
+  border-radius: 10px;
 }
 
 .form-signin {
@@ -42,9 +46,20 @@ body {
 .form-signin .form-control:focus {
   z-index: 2;
 }
-.first-name {
+.name {
+  margin-bottom: -1px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.password {
   margin-bottom: 10px;
-  border-radius:10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .btn-login{
