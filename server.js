@@ -47,7 +47,7 @@ app.post("/login", function(req, res){
     });
 });
 
-// game route
+// game route endpoint
 app.get("/game", function(req, res){
     // conditional logic if user has logged in or not
     if (loginStatus === 1) {
