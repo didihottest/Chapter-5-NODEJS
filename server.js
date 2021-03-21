@@ -82,13 +82,7 @@ app.use((req, res, next) => {
         title: "404 Not Found",
         subtitle: "Go To Main Page",
         location: "/"
-    });;
-
-    res.status(500).render("error", {
-        title: "Internal Server Error",
-        subtitle: "Go To Main Page",
-        location: "/"
-    });;
+    });
 });
 
 // set server to listen to localhost:3000 
