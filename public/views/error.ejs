@@ -12,14 +12,14 @@
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
     <!-- Custom styles for this template -->
-    <link href="../css/notfound-faillogin-loginfirst-style.css" rel="stylesheet">
+    <link href="public/css/error.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
 
     <main class="form-signin">
-        <h1 class="signin-title text-center">404<br>Not Found</h1>
-        <a href="/"><button class="w-100 btn btn-lg btn-index" name="submit" type="submit">Back To Main</button></a>
+        <h1 class="signin-title text-center"><%- title %></h1>
+        <a href="<%= location %>"><button class="w-100 btn btn-lg btn-index" name="submit" type="submit"><%- subtitle %></button></a>
     </main>
 
 </body>
