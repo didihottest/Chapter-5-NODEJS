@@ -7,6 +7,10 @@ const request = require("request")
 const logins = require("./json/playerName.json")
 // router for default route
 const router = express.Router()
+// use dot env module
+const dotenv = require('dotenv');
+// use morgan module
+const morgan = require('morgan');
 // use router as a middleware
 app.use(router);
 // use express static middleware
@@ -15,6 +19,12 @@ app.use(express.static(__dirname));
 app.use(express.urlencoded({
     extended: true
 }));
+// Load environment configuration
+dotenv.config({ path: './config/config.env' })
+// Dev logging middleware
+if(process.env.NODE_ENV === 'development'){
+    app.use(morgan('dev'));
+}
 // set view engine to ejs
 app.set("view engine", "ejs");
 // set ejs directory to public folder
@@ -28,7 +38,7 @@ app.get("/login", function (req, res) {
     res.render("login");
 })
 
-// determine if player already logged in or not
+// determine if player already logged in or not. 0 if not logged in and 1 if logged in
 let loginStatus = 0;
 // put player name in global variable so it can be used by another route
 let playerNameLogin;
