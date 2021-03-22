@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 // use request module
 const request = require("request")
-// import json file to server
+// import json file that contain login information to server
 const logins = require("./json/playerName.json")
 // router for default route
 const router = express.Router()
