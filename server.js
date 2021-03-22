@@ -7,8 +7,11 @@ const request = require("request")
 const logins = require("./json/playerName.json")
 // router for default route
 const router = express.Router()
+// use router as a middleware
 app.use(router);
+// use express static middleware
 app.use(express.static(__dirname));
+// use express bodyparser to pass data from body
 app.use(express.urlencoded({
     extended: true
 }));
@@ -76,13 +79,24 @@ app.get("/api/login", function (req, res) {
     res.status(200).json(logins)
 });
 
-// end point if user go to invalid route
+// end point if server has an internal error
+app.use((error, req, res, next) => {
+    res.status(500).render("error", {
+        title:"Internal Server Error",
+        subtitle: "Go to Main Page",
+        location: "/"
+    })
+    next()
+});
+
+// end point if server has dont have the requested end point
 app.use((req, res, next) => {
     res.status(404).render("error", {
         title: "404 Not Found",
         subtitle: "Go To Main Page",
         location: "/"
     });
+    next()
 });
 
 // set server to listen to localhost:3000 
